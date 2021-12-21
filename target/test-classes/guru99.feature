@@ -24,7 +24,7 @@ Feature:
   Scenario: Verify the purchase of "5" amount toy
     Then The user set the quantity as "5"
     And The user wants click BuyNow button
-    Then The user wants verify correct amount as "100$"
+    Then The user wants verify correct amount as "$100"
     And The user wants to put credit card info as
     |cardNumber|1234567891011121|
     |expirationMonth|10         |
@@ -51,6 +51,7 @@ Feature:
         |   7    |
         |   3    |
         |   2    |
+
 
 
 

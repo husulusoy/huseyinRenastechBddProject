@@ -29,7 +29,7 @@ public class Steps {
     }
     @Then("The user wants to verify the toy price")
     public void the_user_wants_to_verify_the_toy_price() {
-        Assert.assertTrue(homePage.getToyPriceVerify().getText().contains("20$"));
+        Assert.assertTrue(homePage.getToyPriceVerify().getText().contains("$20"));
 
     }
     @Then("The user wants to verify the url contains {string}")
@@ -42,7 +42,7 @@ public class Steps {
     }
     @Then("The user wants click BuyNow button")
     public void the_user_wants_click_buy_now_button() throws InterruptedException {
-       homePage.clickBuyNow();
+       homePage.clickBuyNow().click();
 
     }
     @Then("The user wants verify correct amount as {string}")

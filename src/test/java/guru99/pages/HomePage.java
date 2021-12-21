@@ -4,6 +4,7 @@ import guru99.utils.CommonUtils;
 import guru99.utils.Driver;
 import io.cucumber.java.eo.Se;
 import org.apache.poi.ss.formula.functions.T;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -47,11 +48,13 @@ public class HomePage extends BasePage {
     }
     @FindBy(xpath = "//input[@type='submit']")
     private WebElement buyNowButton;
-    public void clickBuyNow() throws InterruptedException {
-//        Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-//        buyNowButton.click();
+    public WebElement clickBuyNow() {
+        return buyNowButton;
 
-       CommonUtils.clickWithWait(buyNowButton);
+//        buyNowButton.click();
+        //Driver.getDriver().findElement(By.xpath("//input[@type='submit']")).click();
+
+//       CommonUtils.clickWithWait(buyNowButton);
 
     }
 
